@@ -8,8 +8,7 @@ var hash = require('lidy-static-hash');
 gulp.task('html', function (cb) {
     gulp.src("../workspace/finance/web/src/main/webapp/pages/**/*.html")
         .pipe(hash({asset: '../workspace/finance/web/src/main/webapp/'}))
-        .pipe(bom())
-        .pipe(gulp.dest("./dist/"))
+        .pipe(gulp.dest("../workspace/finance/web/src/main/webapp/pages/"))
         .on('end', cb);
 });
 //复制java项目文件
